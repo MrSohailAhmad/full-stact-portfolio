@@ -43,9 +43,9 @@ const SideBar = () => {
           />
         )}
         <div className="pt-[100px] pb-8">
-          <h1 className="mt-6 mb-1 text-3xl font-semibold ">{mydata?.name}</h1>
+          <h1 className="mt-6 mb-1 text-3xl font-semibold ">{myData?.name}</h1>
           <h3 className="mb-4 text-[#7B7B7B] inline-block  px-5 py-1.5 rounded-lg ">
-            {mydata?.position}
+            {myData?.position}
           </h3>
           <div className="flex justify-center space-x-3">
             <a
@@ -147,7 +147,7 @@ const SideBar = () => {
                     className="hover:text-[#FA5252] lg:text-para text-mpara duration-300 transition"
                     href="tel:+923444912684"
                   >
-                    {mydata?.phone}
+                    {myData?.phone}
                   </a>
                 </p>
               </div>
@@ -168,7 +168,7 @@ const SideBar = () => {
               </span>
               <div className="text-left ml-2.5">
                 <p className="text-xs text-[#44566C] ">Location</p>
-                <p className="break-all">{mydata?.location}</p>
+                <p className="break-all">{myData?.location}</p>
               </div>
             </div>
             <div className="flex py-2.5 border-b border-[#E3E3E3] ">
@@ -191,9 +191,9 @@ const SideBar = () => {
                   {" "}
                   <a
                     className="hover:text-[#FA5252] duration-300 transition"
-                    href={`mailto:${mydata?.email}`}
+                    href={`mailto:${myData?.email}`}
                   >
-                    {mydata?.email}
+                    {myData?.email}
                   </a>
                 </p>
               </div>
@@ -214,12 +214,12 @@ const SideBar = () => {
               </span>
               <div className="text-left ml-2.5">
                 <p className="text-xs text-[#44566C] ">Birthday</p>
-                <p className=" break-all">{mydata?.dob}</p>
+                <p className=" break-all">{myData?.dob}</p>
               </div>
             </div>
           </div>
           <a
-            href={`${mydata?.pdfFile}`}
+            href={`${myData?.pdfFile}`}
             download=""
             className="inline-flex items-center mx-auto hover:text-white  duration-200 transition ease-linear hover:!bg-gradient-to-l from-[#DD2476] to-[#fa5252ef] !bg-gray-400 px-8 py-3 text-lg text-white rounded-[35px] mt-6"
           >
