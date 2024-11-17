@@ -3,7 +3,7 @@ import { urlFor } from "@/sanity/lib/image";
 import { MyData } from "@/sanity/schemaTypes/types";
 import { createClient } from "next-sanity";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const sanityClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -17,21 +17,26 @@ const getData = async () => {
 };
 
 const SideBar = () => {
-  const [mydata, setMyData] = useState<MyData>();
+  const [myData, setMyData] = useState<MyData | null>(null);
 
-  getData().then((data: MyData) => {
-    setMyData(data);
-  });
+  // Fetch data when the component mounts
+  useEffect(() => {
+    getData().then((data) => {
+      setMyData(data);
+    });
+  }, []); // Empty dependency array means this runs only once when the component mounts
 
-  console.log("mydata", mydata);
+  if (!myData) {
+    return <div>Loading...</div>; // Optional loading state
+  }
 
   return (
     <div className=" w-[100%] lg:w-[30%]">
       <div className="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center  px-6 rounded-[20px] mt-[180px] md:mt-[170px]">
-        {mydata?.image && (
+        {myData?.image && (
           <Image
             alt="avatar"
-            src={urlFor(mydata.image).url()}
+            src={urlFor(myData.image).url()}
             width={240}
             height={240}
             className="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
