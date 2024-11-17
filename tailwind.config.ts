@@ -8,9 +8,35 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        heading: "24px",
+        subHeading: "20px",
+        para: "18px",
+
+        // medium
+        mheading: "10px",
+        msubHeading: "15px",
+        mpara: "14px",
+      },
+
+      fontFamily: {
+        edu: ['"Edu AU VIC WA NT Pre"', "sans-serif"],
+        "edu-bold": ["Edu AU VIC WA NT Hand Pre bold", "sans-serif"],
+        lexend: ["Lexend", "sans-serif"],
+        "lexend-bold": ["Lexend bold", "sans-serif"],
+        "lexend-extrabold": ["Lexend extra bold", "sans-serif"],
+      },
+      backgroundImage: {
+        "gradient-color":
+          "linear-gradient(to bottom, #4ebcd48a,#4ebca48a,#4ebad48a, #71bbb1ad)",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        hWhite: "#fcfcfb",
+        darkGreen: "#2c6e7c",
+        lightGray: "#c8cfd0",
+        fullGreen: "#62b0a5",
+        lightGreen: "#b1d0ca",
+        darkGray: "#aaaaaa",
       },
     },
   },

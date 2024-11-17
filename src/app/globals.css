@@ -2,20 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lexend:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Edu AU VIC WA NT Hand Precursive";
+  src: url("./fonts/Edu_AU_VIC_WA_NT_Pre/static/EduAUVICWANTPre-Regular.ttf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "Edu AU VIC WA NT Hand Precursive bold";
+  src: url("./fonts/Edu_AU_VIC_WA_NT_Pre/static/EduAUVICWANTPre-Bold.ttf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: "Lexend";
+  src: url("./fonts/Lexend/Lexend-VariableFont_wght.ttf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend bold";
+  src: url("./fonts/Lexend/static/Lexend-Bold.ttf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lexend extra bold";
+  src: url("./fonts/Lexend/static/Lexend-ExtraBold.ttf") format("opentype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+.socialbtn {
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 246 246 / var(--tw-bg-opacity));
+  --tw-gradient-from: #fa5252;
+  --tw-gradient-to: rgba(250, 82, 82, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #dd2476;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
