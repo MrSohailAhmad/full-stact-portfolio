@@ -1,18 +1,12 @@
 "use client";
+import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { MyData } from "@/sanity/schemaTypes/types";
-import { createClient } from "next-sanity";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const sanityClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  useCdn: true,
-});
-
 const getData = async () => {
-  const result: MyData[] = await sanityClient.fetch(`*[_type=="myData"]`);
+  const result: MyData[] = await client.fetch(`*[_type=="myData"]`);
   return result?.[0];
 };
 
