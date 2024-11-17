@@ -4,13 +4,13 @@ import { urlFor } from "@/sanity/lib/image";
 import { MyData } from "@/sanity/schemaTypes/types";
 import Image from "next/image";
 import { useState } from "react";
+const getData = async () => {
+  const result: MyData[] = await client.fetch(`*[_type=="myData"]`);
+  return result?.[0];
+};
 
 const SideBar = () => {
   const [mydata, setMyData] = useState<MyData>();
-  const getData = async () => {
-    const result: MyData[] = await client.fetch(`*[_type=="myData"]`);
-    return result?.[0];
-  };
 
   getData().then((data: MyData) => {
     setMyData(data);
