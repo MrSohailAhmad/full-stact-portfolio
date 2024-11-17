@@ -19,11 +19,6 @@ const SideBar = () => {
       setMyData(data);
     });
   }, []); // Empty dependency array means this runs only once when the component mounts
-
-  if (!myData) {
-    return <div>Loading...</div>; // Optional loading state
-  }
-
   return (
     <div className=" w-[100%] lg:w-[30%]">
       <div className="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center  px-6 rounded-[20px] mt-[180px] md:mt-[170px]">
