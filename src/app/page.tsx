@@ -41,7 +41,7 @@ export default function Home() {
                   <div className="col-span-12 space-y-2.5">
                     <div className="lg:mr-16">
                       <p className="text-gray-lite text-color-910 leading-7 lg:text-para md:text-mpara font-edu italic">
-                        I'm Creative Director and UI/UX Designer from Sydney,
+                        I am Creative Director and UI/UX Designer from Sydney,
                         Australia, working in web development and print media. I
                         enjoy turning complex problems into simple, beautiful
                         and intuitive designs.
