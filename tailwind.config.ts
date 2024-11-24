@@ -9,12 +9,12 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        heading: "24px",
+        heading: "34px",
         subHeading: "20px",
         para: "18px",
 
         // medium
-        mheading: "10px",
+        mheading: "24px",
         msubHeading: "15px",
         mpara: "14px",
       },
