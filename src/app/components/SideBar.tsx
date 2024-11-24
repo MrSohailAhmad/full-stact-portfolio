@@ -27,8 +27,6 @@ const SideBar = () => {
     return `https://cdn.sanity.io/files/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/${process.env.NEXT_PUBLIC_SANITY_DATASET}/${fileId}.${extension}`;
   };
 
-  console.log("mydata", myData);
-
   return (
     <div className=" w-[100%] lg:w-[30%] ">
       <div className="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center  px-6 rounded-[20px] mt-[180px] md:mt-[170px]">
