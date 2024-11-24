@@ -21,12 +21,13 @@ const SideBar = () => {
     });
   }, []); // Empty dependency array means this runs only once when the component mounts
 
-  const getSanityFileUrl = (ref: string) => {
-    if (!ref) return null; // Handle missing or invalid ref
-
+  const getSanityFileUrl = (ref: string): string | undefined => {
+    if (!ref) return undefined; // Return undefined instead of null
     const [fileId, extension] = ref.replace("file-", "").split("-");
     return `https://cdn.sanity.io/files/${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}/${process.env.NEXT_PUBLIC_SANITY_DATASET}/${fileId}.${extension}`;
   };
+
+  console.log("mydata", myData);
 
   return (
     <div className=" w-[100%] lg:w-[30%] ">

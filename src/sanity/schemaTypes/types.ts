@@ -8,7 +8,14 @@ export type MyData = {
   phone: string;
   location: string;
   dob: string;
-  pdfFile?: string;
+  pdfFile?: {
+    // pdfFile is now an object with a file type and asset reference
+    _type: "file"; // Sanity file type
+    asset: {
+      _ref: string; // Reference to the file
+      _type: "reference"; // Sanity reference type
+    };
+  };
 };
 
 export type aboutData = {
