@@ -50,7 +50,7 @@ const Contact = () => {
       <div className="   mb-16  md:p-[48px]  p-4   bg-color-810 rounded-xl bg-[#f3f6f6]  md:mb-[60px]">
         <h3 className="text-2xl ">
           <span className="text-gray-lite ">
-            I'm always open to discussing product
+            I am always open to discussing product
           </span>
           <br />
           <span className="font-semibold ">Design work or partnerships.</span>

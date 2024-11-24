@@ -10,7 +10,7 @@ import Details from "./components/Details";
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-  const [nav, setNav] = useState("home");
+  const [nav, setNav] = useState<string>("home");
   useEffect(() => {
     setIsClient(true);
   }, []);

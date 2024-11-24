@@ -7,7 +7,7 @@ const Navbar = ({
 }: {
   className: string;
   nav: string;
-  setNav: any;
+  setNav: React.Dispatch<React.SetStateAction<string>>;
 }) => {
   const navMenu = [
     {
