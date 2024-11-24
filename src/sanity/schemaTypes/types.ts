@@ -19,3 +19,14 @@ export type aboutData = {
   para2: string;
   para3: string;
 };
+
+export type ContactForm = {
+  name: string;
+  email: string;
+  message: string;
+};
+export type Skill = {
+  skillIcon: string;
+  skill: string;
+  color: string;
+};
